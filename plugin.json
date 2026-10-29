@@ -1,0 +1,18 @@
+{
+  "name": "technical-delivery-engine-plugin",
+  "version": "1.0.0",
+  "description": "Pipeline agêntico baseado em Router/Triagem On-Demand para geração dos Artefatos de Execução e Handover de Engenharia (C4 Model, Release Notes, QA Reports e Termo de Encerramento).",
+  "author": "Engineering Architecture Office",
+  "skills": [
+    "skills/technical-delivery-router"
+  ],
+  "agents": [
+    "agents/phase1-inception-architect.md",
+    "agents/phase2-release-engineer.md",
+    "agents/phase3-handover-closer.md"
+  ],
+  "rules": [
+    "rules/delivery-quality-standards.md",
+    "rules/handover-legal-safeguards.md"
+  ]
+}

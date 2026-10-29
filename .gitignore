@@ -1,0 +1,7 @@
+.DS_Store
+*.log
+auditoria*.txt
+delivery_artifacts/
+scratch/
+.scratch/
+tmp/
