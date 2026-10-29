@@ -74,15 +74,15 @@ Unlike monolithic pipelines or Directed Acyclic Graphs (DAGs) that execute all t
 
 ```mermaid
 flowchart TD
-    Request["User Request + Project Context\n(e.g., 'Generate Release Notes for Sprint 3')"] --> Router{"Step 1: Router Agent\n(Triagem de Intenção)"}
+    Request["User Request + Project Context\n(ex: Generate Release Notes for Sprint 3)"] --> Router{"Step 1: Router Agent\n(Triagem de Intenção)"}
     
-    Router -->|Fase 1 (Inception/Setup)| RouteA["Route A: Inception Architect"]
+    Router -->|Fase 1: Inception e Setup| RouteA["Route A: Inception Architect"]
     RouteA --> A1["FASE1_INCEPTION_ARTIFACTS.md\n(C4 N1/N2 & BDD Backlog)"]
     
-    Router -->|Fase 2 (Sprints/Releases)| RouteB["Route B: Release Engineer"]
+    Router -->|Fase 2: Sprints e Releases| RouteB["Route B: Release Engineer"]
     RouteB --> B1["FASE2_RELEASE_NOTES_QA.md\n(Day 0 Protocol & Mock QA)"]
     
-    Router -->|Fase 3 (Go-Live/Sign-off)| RouteC["Route C: Handover Closer"]
+    Router -->|Fase 3: Go-Live e Sign-off| RouteC["Route C: Handover Closer"]
     RouteC --> C1["FASE3_HANDOVER_SIGNOFF.md\n(Rollback Runbook & IP Transfer)"]
 ```
 
