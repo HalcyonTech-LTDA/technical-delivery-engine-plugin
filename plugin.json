@@ -2,17 +2,22 @@
   "name": "technical-delivery-engine-plugin",
   "version": "1.0.0",
   "description": "Pipeline agêntico baseado em Router/Triagem On-Demand para geração dos Artefatos de Execução e Handover de Engenharia (C4 Model, Release Notes, QA Reports e Termo de Encerramento).",
-  "author": "Engineering Architecture Office",
+  "author": {
+    "name": "Halcyon Tech",
+    "url": "https://github.com/HalcyonTech-LTDA"
+  },
   "skills": [
     "skills/technical-delivery-router"
   ],
-  "agents": [
-    "agents/phase1-inception-architect.md",
-    "agents/phase2-release-engineer.md",
-    "agents/phase3-handover-closer.md"
-  ],
-  "rules": [
-    "rules/delivery-quality-standards.md",
-    "rules/handover-legal-safeguards.md"
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "displayName": "Technical Delivery Engine Plugin",
+  "homepage": "https://github.com/HalcyonTech-LTDA/technical-delivery-engine-plugin",
+  "repository": "https://github.com/HalcyonTech-LTDA/technical-delivery-engine-plugin",
+  "license": "MIT",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Execute technical delivery orchestrator for end-to-end architecture governance",
+    "Audit technical debt, delivery milestones, and engineering squad capacity",
+    "Generate standardized technical documentation and release manifests"
   ]
 }
