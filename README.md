@@ -1,18 +1,36 @@
 <div align="center">
 
-# Technical Delivery Engine Plugin
+# Technical Delivery Engine Plugin Plugin
 ### Event-Driven Router Pipeline for Software Engineering Artifacts & Handover
 
 [![Antigravity Plugin](https://img.shields.io/badge/Antigravity-Plugin%20v1.0.0-4F46E5.svg)](https://antigravity.google)
-[![Architecture: Event-Driven Router](https://img.shields.io/badge/Architecture-Router%20%2F%20Triagem-8B5CF6.svg)](#4-event-driven-router-architecture)
 [![License: MIT](https://img.shields.io/badge/License-MIT-10B981.svg)](./LICENSE)
-[![Format: Markdown](https://img.shields.io/badge/Output-Markdown-F59E0B.svg)](#2-the-3-phases-of-technical-delivery)
+[![Organization](https://img.shields.io/badge/Organization-HalcyonTech--LTDA-black.svg)](https://github.com/HalcyonTech-LTDA)
 
 <p align="center">
-  <b>Generate hyper-specialized engineering artifacts on-demand—from C4 Models to Release Notes and Handover Sign-offs—while seamlessly enforcing contractual protections (Mocks, SLAs, and IP Transfer).</b>
+  <b>Pipeline agêntico baseado em Router/Triagem On-Demand para geração dos Artefatos de Execução e Handover de Engenharia (C4 Model, Release Notes, QA Reports e Termo de Encerramento).</b>
 </p>
 
 </div>
+
+---
+
+## Installation & Verification
+
+### Antigravity CLI (`agy`)
+
+Install directly into your Antigravity environment via the CLI:
+
+```bash
+agy plugin install https://github.com/HalcyonTech-LTDA/technical-delivery-engine-plugin
+```
+
+Verify that the plugin is active and adheres to the strict official schema:
+
+```bash
+agy plugin list
+agy plugin validate --strict ./technical-delivery-engine-plugin
+```
 
 ---
 
@@ -21,6 +39,8 @@
 If the **Contract Annexes Engine** builds the legal shields, the **Technical Delivery Engine** is the machinery that makes those shields work in the trenches.
 
 This plugin ensures that the engineering team delivers professional, highly standardized artifacts throughout the software development lifecycle. By treating engineering documentation as an event-driven flow, we eliminate "zombie projects" and unstructured communication, ensuring the client receives what they paid for while the software house remains protected against undue liability.
+
+---
 
 ---
 
@@ -41,30 +61,6 @@ Because delivery artifacts are generated months apart, this plugin organizes the
 - **Goal:** Execute a clean project closure. The sign-off explicitly conditions the transfer of **Foreground IP** to 100% financial settlement, establishes the 60-day corrective warranty timeline, and includes formal signatures with witnesses.
 
 ---
-
-## 3. Directory Structure (100% Antigravity Compliant)
-
-```text
-technical-delivery-engine-plugin/
-├── plugin.json
-├── README.md
-├── LICENSE
-├── .gitignore
-├── rules/
-│   ├── delivery-quality-standards.md
-│   └── handover-legal-safeguards.md
-├── skills/
-│   └── technical-delivery-router/
-│       ├── SKILL.md
-│       └── templates/
-│           ├── FASE1_INCEPTION_ARTIFACTS.template.md
-│           ├── FASE2_RELEASE_NOTES_QA.template.md
-│           └── FASE3_HANDOVER_SIGNOFF.template.md
-└── agents/
-    ├── phase1-inception-architect.md
-    ├── phase2-release-engineer.md
-    └── phase3-handover-closer.md
-```
 
 ---
 
@@ -88,39 +84,63 @@ flowchart TD
 
 ---
 
-## 5. Installation & Usage
+---
 
-### 5.1 Global Installation
+## What's Included (Component Catalog)
 
-```bash
-mkdir -p ~/.gemini/config/plugins/technical-delivery-engine-plugin
-cp -r ./* ~/.gemini/config/plugins/technical-delivery-engine-plugin/
-```
+### Contextual Rules (`rules/`)
+Automatically loaded to govern and protect project contexts:
+- **[`delivery-quality-standards.md`](rules/delivery-quality-standards.md)**: Aplicar exclusivamente durante a geração de artefatos técnicos de delivery, C4 Models, Release Notes, QA Reports e Swagger/OpenAPI.
+- **[`handover-legal-safeguards.md`](rules/handover-legal-safeguards.md)**: Aplicar exclusivamente durante a geração de artefatos de encerramento de projeto, Termos de Sign-off, Handover e Runbooks de Produção.
 
-### 5.2 Command Invocation
+### Procedural Skills (`skills/`)
+On-demand actionable workflows and runbooks:
+- **[`/technical-delivery-router`](skills/technical-delivery-router/SKILL.md)**: Orquestrador Event-Driven baseado em Triagem (Router). Avalia o pedido do utilizador (Inception, Homologação/QA ou Go-Live/Handover), injeta o template correspondente e despacha a execução exclusivamente para o Agente Especialista daquela fase.
 
-Invoque o comando oficial da skill orquestradora:
-
-```bash
-# Triagem automática com base no pedido:
-/technical-delivery-router auto [caminho_contexto] [output_dir]
-
-# Forçar Fase 1 (Arquitetura e Setup Estrutural):
-/technical-delivery-router fase1 [caminho_sow_ou_dossie] [output_dir]
-
-# Forçar Fase 2 (Release Notes, Protocolo de Homologação e QA):
-/technical-delivery-router fase2 [caminho_dados_release] [output_dir]
-
-# Forçar Fase 3 (Go-Live, Runbook e Sign-off Jurídico):
-/technical-delivery-router fase3 [caminho_dados_encerramento] [output_dir]
-```
-
-*Por padrão, se `[output_dir]` não for informado, os artefatos serão gerados em `./artefatos_delivery/`.*
+### Specialized Subagents (`agents/`)
+Autonomous personas delegated for in-depth execution:
+- **[`phase1-inception-architect`](agents/phase1-inception-architect.md)**: Especialista técnico responsável por gerar os artefatos de Inception (Fase 1) - C4 Model (N1 e N2), matriz de integrações com RACI, CI/CD e Matriz de Rastreabilidade SOW com BDD.
+- **[`phase2-release-engineer`](agents/phase2-release-engineer.md)**: Especialista em QA e Entrega Contínua responsável por disparar o Protocolo de Aceite Tácito, gerar Release Notes, Swagger/OpenAPI e Relatórios de QA blindados com Mocks (Fase 2).
+- **[`phase3-handover-closer`](agents/phase3-handover-closer.md)**: Especialista de encerramento de projeto responsável por gerar Runbooks de Produção com Rollback, Matriz de Débitos e o Termo de Sign-off Jurídico e Técnico com Cessão Condicionada de IP (Fase 3).
 
 ---
 
-## 6. License & Credits
+## Directory Hierarchy
 
-* **Author:** Engineering Architecture Office / HalcyonTech-LTDA
-* **Organization:** [HalcyonTech-LTDA](https://github.com/HalcyonTech-LTDA)
-* **License:** [MIT](./LICENSE)
+```text
+technical-delivery-engine-plugin/
+├── plugin.json              # Official Antigravity manifest (schema v1)
+├── LICENSE                  # MIT License (Copyright 2026 HalcyonTech LTDA)
+├── .gitignore               # System ignores & installed_version.json exclusions
+├── .gitattributes           # Deterministic line endings (* text=auto eol=lf)
+├── README.md                # Golden Standard documentation & runbook
+├── assets/
+│   └── logo.svg             # Official Halcyon Tech corporate vector symbol
+├── rules/                   # Contextual rules discovered automatically
+│   └── delivery-quality-standards.md
+│   └── handover-legal-safeguards.md
+├── skills/                  # Actionable procedural skills (Progressive Disclosure)
+│   └── technical-delivery-router/
+│       └── SKILL.md
+└── agents/                  # Specialized autonomous subagents
+    └── phase1-inception-architect.md
+    └── phase2-release-engineer.md
+    └── phase3-handover-closer.md
+```
+
+---
+
+## 💡 Prompt Recipes & Use Cases
+
+```markdown
+- "Execute technical delivery orchestrator for end-to-end architecture governance"
+- "Audit technical debt, delivery milestones, and engineering squad capacity"
+- "Generate standardized technical documentation and release manifests"
+```
+
+---
+
+## 📄 License & Corporate Governance
+
+Distributed under the **MIT License**. Copyright (c) 2026 **HalcyonTech LTDA**.  
+Engineered with precision and excellence by [Halcyon Tech](https://github.com/HalcyonTech-LTDA).

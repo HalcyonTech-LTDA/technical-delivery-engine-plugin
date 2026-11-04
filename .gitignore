@@ -5,3 +5,4 @@ delivery_artifacts/
 scratch/
 .scratch/
 tmp/
+installed_version.json
